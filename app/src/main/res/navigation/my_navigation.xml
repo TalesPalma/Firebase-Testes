@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_navigation"
+    app:startDestination="@id/loginFragments">
+
+    <fragment
+        android:id="@+id/loginFragments"
+        android:name="com.example.firebasepush.Fragments.LoginFragments"
+        android:label="fragment_login_fragments"
+        tools:layout="@layout/fragment_login_fragments" >
+        <action
+            android:id="@+id/action_loginFragments_to_cadastroFragment"
+            app:destination="@id/cadastroFragment" />
+        <action
+            android:id="@+id/action_loginFragments_to_primeiraTelaFragment"
+            app:destination="@id/primeiraTelaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cadastroFragment"
+        android:name="com.example.firebasepush.Fragments.CadastroFragment"
+        android:label="fragment_cadastro"
+        tools:layout="@layout/fragment_cadastro" >
+        <action
+            android:id="@+id/action_cadastroFragment_to_loginFragments"
+            app:destination="@id/loginFragments" />
+        <action
+            android:id="@+id/action_cadastroFragment_to_primeiraTelaFragment"
+            app:destination="@id/primeiraTelaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/primeiraTelaFragment"
+        android:name="com.example.firebasepush.Fragments.PrimeiraTelaFragment"
+        android:label="fragment_primeira_tela2"
+        tools:layout="@layout/fragment_primeira_tela2" >
+        <action
+            android:id="@+id/action_primeiraTelaFragment_to_loginFragments"
+            app:destination="@id/loginFragments" />
+    </fragment>
+</navigation>
